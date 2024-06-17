@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>DisneyWorld</td>
+      <td>26 Apr 2024, 18:07</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepDefinition.EmailSteps.user_navigates_to_mailinator_page()</td>
+              <td>10</td>
+              <td class="duration" data-value="404420">0.000</td>
+              <td class="duration" data-value="404420">0.001</td>
+              <td class="duration" data-value="4044200">0.004</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.EmailSteps.user_navigates_to_mailinator_page_and_enter_searched_mail()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.EmailSteps.user_navigates_to_mailinator_page_for_second_time()</td>
+              <td>6</td>
+              <td class="duration" data-value="333716">0.000</td>
+              <td class="duration" data-value="333716">0.001</td>
+              <td class="duration" data-value="2002300">0.002</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.EmailSteps.user_navigates_to_mailinator_page_for_third_time()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.EmailSteps.user_navigates_to_mailinator_page_of(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="9511045000">9.511</td>
+              <td class="duration" data-value="9511045000">9.511</td>
+              <td class="duration" data-value="9511045000">9.511</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.EmailSteps.verify_email_is_received()</td>
+              <td>21</td>
+              <td class="duration" data-value="317404166">0.317</td>
+              <td class="duration" data-value="317404166">6.661</td>
+              <td class="duration" data-value="6665487500">6.665</td>
+              <td class="failed">4.76%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.cancel_them()</td>
+              <td>2</td>
+              <td class="duration" data-value="502050">0.000</td>
+              <td class="duration" data-value="502050">0.001</td>
+              <td class="duration" data-value="1004100">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.check_first_invited_guest_is_displayed()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_add_a_guest()</td>
+              <td>10</td>
+              <td class="duration" data-value="2349718670">2.349</td>
+              <td class="duration" data-value="2349718670">6.405</td>
+              <td class="duration" data-value="23497186700">23.497</td>
+              <td class="failed">40.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_add_a_guest_in_search_result_then_click_disney_account_and_create_account()</td>
+              <td>2</td>
+              <td class="duration" data-value="6583515400">6.583</td>
+              <td class="duration" data-value="6583515400">13.167</td>
+              <td class="duration" data-value="13167030800">13.167</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_add_a_guest_then_click_disney_account_and_create_account()</td>
+              <td>40</td>
+              <td class="duration" data-value="81857397750">1:21.857</td>
+              <td class="duration" data-value="81857397750">2:43.978</td>
+              <td class="duration" data-value="3274295910000">54:34.295</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_add_guest_who_does_not_have_an_account()</td>
+              <td>2</td>
+              <td class="duration" data-value="76103891150">1:16.103</td>
+              <td class="duration" data-value="76103891150">2:32.207</td>
+              <td class="duration" data-value="152207782300">2:32.207</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_allow_searchable()</td>
+              <td>1</td>
+              <td class="duration" data-value="6139488900">6.139</td>
+              <td class="duration" data-value="6139488900">6.139</td>
+              <td class="duration" data-value="6139488900">6.139</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_close()</td>
+              <td>2</td>
+              <td class="duration" data-value="507550">0.000</td>
+              <td class="duration" data-value="507550">0.001</td>
+              <td class="duration" data-value="1015100">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_done()</td>
+              <td>2</td>
+              <td class="duration" data-value="3186736600">3.186</td>
+              <td class="duration" data-value="3186736600">3.197</td>
+              <td class="duration" data-value="6373473200">6.373</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_like_and_share_settings_button()</td>
+              <td>4</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_on_settings_of_the_requested_friend()</td>
+              <td>12</td>
+              <td class="duration" data-value="166933">0.000</td>
+              <td class="duration" data-value="166933">0.001</td>
+              <td class="duration" data-value="2003200">0.002</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_remove()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_remove_and_save()</td>
+              <td>2</td>
+              <td class="duration" data-value="494600">0.000</td>
+              <td class="duration" data-value="494600">0.000</td>
+              <td class="duration" data-value="989200">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_save()</td>
+              <td>4</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_search()</td>
+              <td>8</td>
+              <td class="duration" data-value="1242552912">1.242</td>
+              <td class="duration" data-value="1242552912">3.340</td>
+              <td class="duration" data-value="9940423300">9.940</td>
+              <td class="failed">37.50%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_send_in_that_request()</td>
+              <td>2</td>
+              <td class="duration" data-value="4109709500">4.109</td>
+              <td class="duration" data-value="4109709500">4.223</td>
+              <td class="duration" data-value="8219419000">8.219</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_sent()</td>
+              <td>6</td>
+              <td class="duration" data-value="500316">0.000</td>
+              <td class="duration" data-value="500316">0.001</td>
+              <td class="duration" data-value="3001900">0.003</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_settings_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_settings_button_and_remove_for_multiple_users()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.click_what_information_can_family_and_friends_see()</td>
+              <td>1</td>
+              <td class="duration" data-value="5869358800">5.869</td>
+              <td class="duration" data-value="5869358800">5.869</td>
+              <td class="duration" data-value="5869358800">5.869</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.disable_share_and_allow_toggles_and_click_save()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.enable_share_and_allow_toggles_and_click_save()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.enter_all_data_and_click_done()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.enter_email_in_invite_and_click_done()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.enters_age_and_click_done()</td>
+              <td>2</td>
+              <td class="duration" data-value="15984782750">15.984</td>
+              <td class="duration" data-value="15984782750">31.969</td>
+              <td class="duration" data-value="31969565500">31.969</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.enters_before_registered_and()</td>
+              <td>4</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.enters_firstname_lastname_and_email()</td>
+              <td>2</td>
+              <td class="duration" data-value="10137716750">10.137</td>
+              <td class="duration" data-value="10137716750">10.626</td>
+              <td class="duration" data-value="20275433500">20.275</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.enters_title_firstname_lastname_age_and_click_done()</td>
+              <td>30</td>
+              <td class="duration" data-value="66770">0.000</td>
+              <td class="duration" data-value="66770">0.001</td>
+              <td class="duration" data-value="2003100">0.002</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.enters_title_firstname_lastname_age_and_click_done_for_second_time()</td>
+              <td>8</td>
+              <td class="duration" data-value="499362">0.000</td>
+              <td class="duration" data-value="499362">0.001</td>
+              <td class="duration" data-value="3994900">0.003</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.enters_title_firstname_lastname_age_email_id_and_click_done_for_third_time()</td>
+              <td>2</td>
+              <td class="duration" data-value="500950">0.000</td>
+              <td class="duration" data-value="500950">0.001</td>
+              <td class="duration" data-value="1001900">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.enters_unregistered_firstname_lastname_and_email()</td>
+              <td>2</td>
+              <td class="duration" data-value="5630322400">5.630</td>
+              <td class="duration" data-value="5630322400">11.260</td>
+              <td class="duration" data-value="11260644800">11.260</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.resend_them()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.scroll_down_and_click_family_list()</td>
+              <td>55</td>
+              <td class="duration" data-value="9400313343">9.400</td>
+              <td class="duration" data-value="9400313343">21.564</td>
+              <td class="duration" data-value="517017233900">8:37.017</td>
+              <td class="failed">45.45%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.untoggle_allow_friend_to_view_all_of_your_plans()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.untoggle_allow_friend_to_view_your_disney_pass_photos()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.user_select_create_profile_u_will_manage()</td>
+              <td>2</td>
+              <td class="duration" data-value="499350">0.000</td>
+              <td class="duration" data-value="499350">0.000</td>
+              <td class="duration" data-value="998700">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.verify_dialog_box_is_displayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="3205090200">3.205</td>
+              <td class="duration" data-value="3205090200">3.205</td>
+              <td class="duration" data-value="3205090200">3.205</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.verify_the_user_is_displayed()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.verify_three_mails_are_sent()</td>
+              <td>2</td>
+              <td class="duration" data-value="999750">0.000</td>
+              <td class="duration" data-value="999750">0.001</td>
+              <td class="duration" data-value="1999500">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.FriendsAndFamilySteps.verify_user_is_not_found()</td>
+              <td>4</td>
+              <td class="duration" data-value="942669625">0.942</td>
+              <td class="duration" data-value="942669625">3.770</td>
+              <td class="duration" data-value="3770678500">3.770</td>
+              <td class="failed">25.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.HomeSteps.check_invite_is_received()</td>
+              <td>32</td>
+              <td class="duration" data-value="92421">0.000</td>
+              <td class="duration" data-value="92421">0.001</td>
+              <td class="duration" data-value="2957500">0.002</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.HomeSteps.click_accept()</td>
+              <td>24</td>
+              <td class="duration" data-value="166479">0.000</td>
+              <td class="duration" data-value="166479">0.001</td>
+              <td class="duration" data-value="3995500">0.003</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.HomeSteps.click_accept_for_multiple_users()</td>
+              <td>4</td>
+              <td class="duration" data-value="248800">0.000</td>
+              <td class="duration" data-value="248800">0.000</td>
+              <td class="duration" data-value="995200">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.HomeSteps.click_decline()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.HomeSteps.click_decline_for_multiple_users()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.HomeSteps.click_on_notification_icon_and_click_manage_invites()</td>
+              <td>32</td>
+              <td class="duration" data-value="194145481">0.194</td>
+              <td class="duration" data-value="194145481">6.205</td>
+              <td class="duration" data-value="6212655400">6.212</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.HomeSteps.close_the_browser()</td>
+              <td>39</td>
+              <td class="duration" data-value="33661807">0.033</td>
+              <td class="duration" data-value="33661807">0.439</td>
+              <td class="duration" data-value="1312810500">1.312</td>
+              <td class="failed">7.69%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.HomeSteps.user_is_navigating_to_disney_application()</td>
+              <td>39</td>
+              <td class="duration" data-value="10921155235">10.921</td>
+              <td class="duration" data-value="10921155235">24.369</td>
+              <td class="duration" data-value="425925054200">7:5.925</td>
+              <td class="failed">97.44%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.HomeSteps.user_sign_out_disney_application()</td>
+              <td>48</td>
+              <td class="duration" data-value="129448668">0.129</td>
+              <td class="duration" data-value="129448668">6.209</td>
+              <td class="duration" data-value="6213536100">6.213</td>
+              <td class="failed">2.08%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.LoginSteps.again_login_by_entering_enter_and(java.lang.String)</td>
+              <td>24</td>
+              <td class="duration" data-value="124737">0.000</td>
+              <td class="duration" data-value="124737">0.000</td>
+              <td class="duration" data-value="2993700">0.002</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.LoginSteps.again_login_by_entering_enter_and_another(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.LoginSteps.again_login_to_first_invited_account()</td>
+              <td>2</td>
+              <td class="duration" data-value="500850">0.000</td>
+              <td class="duration" data-value="500850">0.001</td>
+              <td class="duration" data-value="1001700">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.LoginSteps.again_login_to_second_invited_account()</td>
+              <td>2</td>
+              <td class="duration" data-value="494650">0.000</td>
+              <td class="duration" data-value="494650">0.000</td>
+              <td class="duration" data-value="989300">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.LoginSteps.again_login_to_the_same_account()</td>
+              <td>12</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.LoginSteps.click_on_sign_in_and_create_another_new_account()</td>
+              <td>4</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.LoginSteps.click_on_sign_in_and_enter_and()</td>
+              <td>39</td>
+              <td class="duration" data-value="60569310271">1:0.569</td>
+              <td class="duration" data-value="60569310271">1:5.113</td>
+              <td class="duration" data-value="2362203100600">39:22.203</td>
+              <td class="failed">94.87%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinition.LoginSteps.login_to_with(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="29453566100">29.453</td>
+              <td class="duration" data-value="29453566100">58.907</td>
+              <td class="duration" data-value="58907132200">58.907</td>
+              <td class="failed">50.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>63</td>
+            <td>589</td>
+            <td class="duration">11.823</td>
+            <td class="duration">54:34.295</td>
+            <td class="duration">1:56:4.196</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

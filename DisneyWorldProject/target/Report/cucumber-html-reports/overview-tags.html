@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Tags Overview</title>
+
+
+  <script>
+$(document).ready(function() {
+
+    var chartData = {
+        labels:  [ "@TestCaseKey=Checking_Mutual_Guest",  "@TestCaseKey=Decline_Multiple_Users",  "@TestCaseKey=Disney_Accept",  "@TestCaseKey=Disney_Allow_Search",  "@TestCaseKey=Disney_CloseSettings",  "@TestCaseKey=Disney_ConnectingProfiles",  "@TestCaseKey=Disney_CreateProfileYouManage",  "@TestCaseKey=Disney_Decline",  "@TestCaseKey=Disney_InformationDialog",  "@TestCaseKey=Disney_Invite_Two_Guests",  "@TestCaseKey=Disney_Invite_Two_Guests_Resend",  "@TestCaseKey=Disney_LikeAndShare_Settings",  "@TestCaseKey=Disney_Multiple_Accept",  "@TestCaseKey=Disney_PassPhotos",  "@TestCaseKey=Disney_Remove",  "@TestCaseKey=Disney_RemoveName",  "@TestCaseKey=Disney_Search",  "@TestCaseKey=Disney_Search_Unregistered_Guest",  "@TestCaseKey=Disney_Sent_Three_Unregistered_request",  "@TestCaseKey=Disney_ViewPlans",  "@TestCaseKey=Remove_Multiple_Guests", ] ,
+        datasets: [
+            {
+                label: "Passed",
+                backgroundColor: "#92DD96",
+                data:  [ 10.53,  27.27,  3.85,  100.00,  15.62,  20.00,  30.00,  23.08,  100.00,  21.43,  12.50,  8.00,  27.27,  14.71,  23.08,  15.62,  100.00,  38.24,  11.11,  17.65,  20.83, ] 
+            },
+            {
+                label: "Failed",
+                backgroundColor: "#F2928C",
+                data:  [ 5.26,  9.09,  7.69,  0.00,  6.25,  6.67,  10.00,  7.69,  0.00,  7.14,  4.17,  4.00,  9.09,  5.88,  7.69,  6.25,  0.00,  5.88,  5.56,  5.88,  8.33, ] 
+            },
+            {
+                label: "Skipped",
+                backgroundColor: "#8AF",
+                data:  [ 84.21,  63.64,  88.46,  0.00,  78.12,  73.33,  60.00,  69.23,  0.00,  71.43,  83.33,  88.00,  63.64,  79.41,  69.23,  78.12,  0.00,  55.88,  83.33,  76.47,  70.83, ] 
+            },
+            {
+                label: "Pending",
+                backgroundColor: "#F5F28F",
+                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ] 
+            },
+            {
+                label: "Undefined",
+                backgroundColor: "#F5B975",
+                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ] 
+            }
+        ]
+    };
+
+    var context = document.getElementById("tags-chart");
+    window.myBar = new Chart(context, {
+        type: "bar",
+        data: chartData,
+        options: {
+            tooltips: {
+                mode: "label"
+            },
+            responsive: true,
+            legend: {
+                display: false
+            },
+            scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            }
+        }
+    });
+
+});  </script>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation"      class="active" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>DisneyWorld</td>
+      <td>26 Apr 2024, 18:07</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Tags Statistics</h2>
+      <p>The following graph shows passing and failing statistics for tags</p>
+  </div>
+</div>
+
+
+  <div class="container-fluid" id="charts">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <canvas id="tags-chart" height="50"></canvas>
+      </div>
+    </div>
+  </div>
+
+<br/>
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+<table id="tablesorter" class="stats-table table-hover">
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Tag</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+  <tbody>
+      <tr>
+        <td class="tagname"><a href="report-tag_1048430577.html">@TestCaseKey=Checking_Mutual_Guest</a></td>
+
+        <td      class="passed"    >4</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >32</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">38</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="161595215500">2:41.595</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_1773235137.html">@TestCaseKey=Decline_Multiple_Users</a></td>
+
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >14</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">22</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="503505395100">8:23.505</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_56449330.html">@TestCaseKey=Disney_Accept</a></td>
+
+        <td      class="passed"    >1</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >23</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">26</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="17235061500">17.235</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_2399448936.html">@TestCaseKey=Disney_Allow_Search</a></td>
+
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="122286827000">2:2.286</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_1172171695.html">@TestCaseKey=Disney_CloseSettings</a></td>
+
+        <td      class="passed"    >5</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >25</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">32</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="331582903000">5:31.582</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_2257916524.html">@TestCaseKey=Disney_ConnectingProfiles</a></td>
+
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >22</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">30</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="518379064300">8:38.379</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_2732804609.html">@TestCaseKey=Disney_CreateProfileYouManage</a></td>
+
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >12</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">20</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="328623913700">5:28.623</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_174933034.html">@TestCaseKey=Disney_Decline</a></td>
+
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >18</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">26</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="520576534300">8:40.576</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_1693347976.html">@TestCaseKey=Disney_InformationDialog</a></td>
+
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="99293853700">1:39.293</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_2885541144.html">@TestCaseKey=Disney_Invite_Two_Guests</a></td>
+
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >20</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">28</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="520748682400">8:40.748</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_155146816.html">@TestCaseKey=Disney_Invite_Two_Guests_Resend</a></td>
+
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >40</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">48</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="512707100300">8:32.707</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_1543905271.html">@TestCaseKey=Disney_LikeAndShare_Settings</a></td>
+
+        <td      class="passed"    >4</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >44</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">50</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="155982237600">2:35.982</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_1365828203.html">@TestCaseKey=Disney_Multiple_Accept</a></td>
+
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >14</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">22</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="507222696900">8:27.222</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_1228299932.html">@TestCaseKey=Disney_PassPhotos</a></td>
+
+        <td      class="passed"    >5</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >27</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">34</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="332442164000">5:32.442</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_545299630.html">@TestCaseKey=Disney_Remove</a></td>
+
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >18</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">26</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="522036170200">8:42.036</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_2157550553.html">@TestCaseKey=Disney_RemoveName</a></td>
+
+        <td      class="passed"    >5</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >25</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">32</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="333071171200">5:33.071</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_573573586.html">@TestCaseKey=Disney_Search</a></td>
+
+        <td      class="passed"    >11</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">11</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="149821756600">2:29.821</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_3838254175.html">@TestCaseKey=Disney_Search_Unregistered_Guest</a></td>
+
+        <td      class="passed"    >13</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >19</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">34</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="318009567900">5:18.009</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_4208189351.html">@TestCaseKey=Disney_Sent_Three_Unregistered_request</a></td>
+
+        <td      class="passed"    >4</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >30</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">36</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="171103812700">2:51.103</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_2880566969.html">@TestCaseKey=Disney_ViewPlans</a></td>
+
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >26</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">34</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="501678419000">8:21.678</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_2782601518.html">@TestCaseKey=Remove_Multiple_Guests</a></td>
+
+        <td      class="passed"    >5</td>
+        <td      class="failed"    >2</td>
+        <td     class="skipped"   >17</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">24</td>
+
+        <td >0</td>
+        <td  class="failed"    >2</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="336293985000">5:36.293</td>
+        <td class="failed">Failed</td>
+      </tr>
+  </tbody>
+
+  <tfoot class="total">
+    <tr>
+      <td></td>
+      <td>127</td>
+      <td>36</td>
+      <td>426</td>
+      <td>0</td>
+      <td>0</td>
+      <td>589</td>
+
+      <td>3</td>
+      <td>36</td>
+      <td>39</td>
+
+      <td class="duration">1:56:4.196</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>21.56%</td>
+      <td>6.11%</td>
+      <td>72.33%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td></td>
+      <td>7.69%</td>
+      <td>92.31%</td>
+      <td></td>
+      <td></td>
+      <td>14.29%</td>
+    </tr>
+  </tfoot>
+</table>
+
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
