@@ -22,15 +22,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import java.util.concurrent.ThreadLocalRandom;
 
 import config.BaseClass;
 
 public class DisneyWorldWrapper extends BaseClass {
 
     public static Random random = new Random();
-
+    public static Actions actions = new Actions(driver);
+    
     public DisneyWorldWrapper() {
         driver = new ChromeDriver();
     }
@@ -63,38 +66,11 @@ public static void refreshPage(){
 
     public static String dob() {
         Random random = new Random();
-
-        // Generate year (between 1000 and 2009)
-        int year = random.nextInt(2007 - 1000) + 1000;
-
-        // Generate month (between 1 and 12)
+        int year = random.nextInt(1980 - 1000) + 1000;
         int month = random.nextInt(12) + 1;
-
-        // Generate day (between 1 and 28, assuming all months have 28 days)
         int day = random.nextInt(28) + 1;
-
         // Format the date
-        String date = String.format("%04d/%02d/%02d", year, month, day);
-        return date;
-    }
-    public static String dateday(){
-        Random random = new Random();
-        int day = random.nextInt(28) + 1;
-        String date= String.format("%02d",day);
-
-        return date;
-    }
-    public static String datemonth(){
-        Random random = new Random();
-        int month = random.nextInt(12) + 1;
-        String date= String.format("%02d",month);
-
-        return date;
-    }
-    public static String dateyear(){
-        Random random = new Random();
-        int year = random.nextInt(2007 - 1000) + 1000;
-        String date= String.format("%04d",year);
+        String date = String.format("%04d-%02d-%02d", year, month, day);
 
         return date;
     }
@@ -106,10 +82,8 @@ public static void refreshPage(){
     public static void clickOn(By locator) {
         driver.findElement(locator).click();
     }
-    public static void cleartextbox(By locator)
-    {
-        driver.findElement(locator).clear();
-    }
+    
+    
 
     public static void sendKeysEnter(By locator, Keys enter) {
         driver.findElement(locator).sendKeys(enter);
@@ -118,6 +92,16 @@ public static void refreshPage(){
     public static void sendKeys(By locator, String data) {
         driver.findElement(locator).sendKeys(data);
     }
+    
+    public static void sendkeysCSS(By locator, String data) {
+        driver.findElement(locator).sendKeys(data);
+   }
+    
+    
+    public static void clickOnCSS(By locator) {
+        driver.findElement(locator).click();
+    }
+    
 
     public static void sendKeySB(By locator, String data) {
         driver.findElement(locator).sendKeys(data);
@@ -145,6 +129,12 @@ public static void refreshPage(){
         SearchContext shadowRoot = e.getShadowRoot();
         shadowRoot.findElement(locator).click();
     }
+
+    public static SearchContext shadowRootGet( By locator) {
+        SearchContext shadow= findelement(locator).getShadowRoot();
+        return shadow;
+    }
+
     public static void shadowRootSendKeys(WebElement e, By locator, String data) {
         SearchContext shadowRoot = e.getShadowRoot();
         shadowRoot.findElement(locator).sendKeys(data);
@@ -161,7 +151,12 @@ public static void refreshPage(){
     }
 
     public static void isDisplayed(By locator) {
-        driver.findElement(locator).isDisplayed();
+        //driver.findElement(locator).isDisplayed();
+    	 if (driver.findElement(locator).isDisplayed()) {
+             System.out.println("Element is displayed as expected.");
+         } else {
+             System.out.println("Element is not displayed, which is unexpected.");
+         }
     }
 
     public static void isNotDisplayed(By locator) {
@@ -207,7 +202,7 @@ public static void refreshPage(){
     }
 
     public static WebElement fluentWaitForElement(final By locator) {
-        Wait<WebDriver> wait = new FluentWait(driver).withTimeout(Duration.ofSeconds(140))
+        Wait<WebDriver> wait = new FluentWait(driver).withTimeout(Duration.ofSeconds(200))
                 .pollingEvery(Duration.ofSeconds(5)).ignoring(org.openqa.selenium.NoSuchElementException.class);
 
         return wait.until(new Function<WebDriver, WebElement>() {
@@ -216,4 +211,68 @@ public static void refreshPage(){
             }
         });
     }
+    public static void hoverOverElement( WebElement element) {
+        actions.moveToElement(element).perform();
+    }
+    
+    public static void cleartextbox(By locator) {
+        driver.findElement(locator).clear();
+    }
+    public static void isemptytextbox(By locator) {
+    	// driver.findElement(locator)).isEmpty();
+    	 WebElement inputBox = driver.findElement(locator);
+    	 String textInsideInputBox = inputBox.getAttribute("value");
+
+    	 // Check whether input field is blank
+    	 if(textInsideInputBox.isEmpty())
+    	 {
+    	    System.out.println("Input field is empty");
+    	 }
+        
+    }
+    public static void sendKeysTab(By locator, Keys tab) {
+        driver.findElement(locator).sendKeys(tab);
+    }
+    public static void isMessageDisplayed(By locator) {
+    	// driver.findElement(locator)).isEmpty();
+    	// WebElement message = driver.findElement(locator);
+    	
+
+    	 
+    	 if(driver.findElement(locator).isDisplayed())
+    	 {
+    		System.out.println("Error message displayed");
+    	    System.out.println(driver.findElement(locator).getText());
+    	 }
+    	 else
+    	 {
+    		 System.out.println("No message displayed");
+    	 }
+        
+    }
+    
+    public static void dropdown(By locator,String value) {
+    	
+    	Select dropdown=new Select(driver.findElement(locator)) ;
+    	dropdown.selectByValue(value);
+    }
+    
+    public static void isMessageDisplayedCSS(By locator) {
+    	 
+    	 if(driver.findElement(locator).isDisplayed())
+    	 {
+    		System.out.println("Error message displayed");
+    	    
+    	 }
+    	 else
+    	 {
+    		 System.out.println("No message displayed");
+    	 }
+        
+    }
+    
+    
+    
+    
+    
 }

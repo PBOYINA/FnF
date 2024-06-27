@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Run All Tests in Google Chrome</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/6</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Apr 26 18:06:28 IST 2024</td>
+<td>Started on:</td><td>Fri May 31 14:52:35 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>32 seconds (32824 ms)</td>
+<tr><td>Total time:</td><td>22 seconds (22597 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,7 +68,7 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,37 +76,422 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runnerclasses.Accept.feature()'><b>feature</b><br>Test class: Runnerclasses.Accept<br>Test method: Runs Cucumber Feature<br>Parameters: "Verify user is able to accept Friends and Family request", "Verify user is able to accept Friends and Family request"</td>
-<td><div><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+<td title='Runnerclasses.WithoutFloridaValidation.setUp()'><b>setUp</b><br>Test class: Runnerclasses.WithoutFloridaValidation<br>Parameters: edge, 124.0.2478.67, false, saucelabs, PROF_Studio, 8f0baf43-e329-4837-9180-1dfa345be4eb, FloridaResidency</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/f1a00352c81c445a9382e4afa5e0f731 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
 Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, get {url=https://disneyworld.disney.go.com/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.61, chrome: {chromedriverVersion: 124.0.6367.60 (8771130bd84f..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49788}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(pac: http://127.0.0.1..., setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
-	at config.BaseClass.openBrowser(BaseClass.java:42)
-	at stepDefinition.HomeSteps.user_is_navigating_to_disney_application(HomeSteps.java:32)
-	at ✽.User is navigating to Disney application(file:///C:/selenium%20new/Friends%20and%20family/DisneyWorldProject/resources/Features/AcceptSingleUser.feature:5)
-</pre></div><a href='#' onClick='toggleBox("stack-trace530188800", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace530188800'><pre>org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace144486361", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace144486361'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/f1a00352c81c445a9382e4afa5e0f731 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
 Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [null, get {url=https://disneyworld.disney.go.com/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.61, chrome: {chromedriverVersion: 124.0.6367.60 (8771130bd84f..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49788}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(pac: http://127.0.0.1..., setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
-	at config.BaseClass.openBrowser(BaseClass.java:42)
-	at stepDefinition.HomeSteps.user_is_navigating_to_disney_application(HomeSteps.java:32)
-	at ✽.User is navigating to Disney application(file:///C:/selenium%20new/Friends%20and%20family/DisneyWorldProject/resources/Features/AcceptSingleUser.feature:5)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
 </pre></div></td>
 <td>0</td>
-<td>Runnerclasses.Accept@58d75e99</td></tr>
+<td>Runnerclasses.WithoutFloridaValidation@120f102b</td></tr>
+<tr>
+<td title='Runnerclasses.FloridaValidatedifferentaddress.setUp()'><b>setUp</b><br>Test class: Runnerclasses.FloridaValidatedifferentaddress<br>Parameters: edge, 124.0.2478.67, false, saucelabs, PROF_Studio, 8f0baf43-e329-4837-9180-1dfa345be4eb, FloridaResidency</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/c904b9c6cbed4fa9b470c38cb0bec99c 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace618329836", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace618329836'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/c904b9c6cbed4fa9b470c38cb0bec99c 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>Runnerclasses.FloridaValidatedifferentaddress@272ed83b</td></tr>
+<tr>
+<td title='Runnerclasses.FloridaFields.setUp()'><b>setUp</b><br>Test class: Runnerclasses.FloridaFields<br>Parameters: edge, 124.0.2478.67, false, saucelabs, PROF_Studio, 8f0baf43-e329-4837-9180-1dfa345be4eb, FloridaResidency</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/98454b672ec9487bbdcb0a5320cb7077 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1150182265", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1150182265'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/98454b672ec9487bbdcb0a5320cb7077 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>Runnerclasses.FloridaFields@732c2a62</td></tr>
+<tr>
+<td title='Runnerclasses.NonFloridaRunner.setUp()'><b>setUp</b><br>Test class: Runnerclasses.NonFloridaRunner<br>Parameters: edge, 124.0.2478.67, false, saucelabs, PROF_Studio, 8f0baf43-e329-4837-9180-1dfa345be4eb, FloridaResidency</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/1df1c6e0c02a4411950c070468a3a6f1 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace37865931", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace37865931'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/1df1c6e0c02a4411950c070468a3a6f1 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>6</td>
+<td>Runnerclasses.NonFloridaRunner@53976f5c</td></tr>
+<tr>
+<td title='Runnerclasses.FloridaDifferentTicketType.setUp()'><b>setUp</b><br>Test class: Runnerclasses.FloridaDifferentTicketType<br>Parameters: edge, 124.0.2478.67, false, saucelabs, PROF_Studio, 8f0baf43-e329-4837-9180-1dfa345be4eb, FloridaResidency</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/248e11e2960c411ab8271476e6794b62 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace177078066", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace177078066'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/248e11e2960c411ab8271476e6794b62 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>Runnerclasses.FloridaDifferentTicketType@1ba9117e</td></tr>
+<tr>
+<td title='Runnerclasses.FloridaVerifyMeKnow.setUp()'><b>setUp</b><br>Test class: Runnerclasses.FloridaVerifyMeKnow<br>Parameters: edge, 124.0.2478.67, false, saucelabs, PROF_Studio, 8f0baf43-e329-4837-9180-1dfa345be4eb, FloridaResidency</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/bafcf7fd2b75443089a0c3046dba330c 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace846856229", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace846856229'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/bafcf7fd2b75443089a0c3046dba330c 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>Runnerclasses.FloridaVerifyMeKnow@41fecb8b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Runnerclasses.FloridaValidatedifferentaddress.closeBrowser()'><b>closeBrowser</b><br>Test class: Runnerclasses.FloridaValidatedifferentaddress</td>
+<td></td>
+<td>0</td>
+<td>Runnerclasses.FloridaValidatedifferentaddress@272ed83b</td></tr>
+<tr>
+<td title='Runnerclasses.NonFloridaRunner.closeBrowser()'><b>closeBrowser</b><br>Test class: Runnerclasses.NonFloridaRunner</td>
+<td></td>
+<td>0</td>
+<td>Runnerclasses.NonFloridaRunner@53976f5c</td></tr>
+<tr>
+<td title='Runnerclasses.FloridaFields.closeBrowser()'><b>closeBrowser</b><br>Test class: Runnerclasses.FloridaFields</td>
+<td></td>
+<td>0</td>
+<td>Runnerclasses.FloridaFields@732c2a62</td></tr>
+<tr>
+<td title='Runnerclasses.WithoutFloridaValidation.closeBrowser()'><b>closeBrowser</b><br>Test class: Runnerclasses.WithoutFloridaValidation</td>
+<td></td>
+<td>0</td>
+<td>Runnerclasses.WithoutFloridaValidation@120f102b</td></tr>
+<tr>
+<td title='Runnerclasses.FloridaVerifyMeKnow.closeBrowser()'><b>closeBrowser</b><br>Test class: Runnerclasses.FloridaVerifyMeKnow</td>
+<td></td>
+<td>0</td>
+<td>Runnerclasses.FloridaVerifyMeKnow@41fecb8b</td></tr>
+<tr>
+<td title='Runnerclasses.FloridaDifferentTicketType.closeBrowser()'><b>closeBrowser</b><br>Test class: Runnerclasses.FloridaDifferentTicketType</td>
+<td></td>
+<td>0</td>
+<td>Runnerclasses.FloridaDifferentTicketType@1ba9117e</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -117,59 +502,383 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runnerclasses.Accept.feature()'><b>feature</b><br>Test class: Runnerclasses.Accept<br>Test method: Runs Cucumber Feature<br>Parameters: "Verify user is able to accept Friends and Family request", "Verify user is able to accept Friends and Family request"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;onetrust-accept-btn-handler&quot;]&quot;}
-  (Session info: chrome=124.0.6367.61)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<td title='Runnerclasses.FloridaValidatedifferentaddress.feature()'><b>feature</b><br>Test class: Runnerclasses.FloridaValidatedifferentaddress<br>Test method: Runs Cucumber Feature<br>Parameters: "Florida resident validation with non Florida account", "Validate Florida account with different address : Florida resident validation with different address"</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/c904b9c6cbed4fa9b470c38cb0bec99c 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
 Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [4bc91314fcc74a5ba4c15990958367ce, findElement {using=xpath, value=//*[@id=&quot;onetrust-accept-btn-handler&quot;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.61, chrome: {chromedriverVersion: 124.0.6367.60 (8771130bd84f..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49788}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(pac: http://127.0.0.1..., setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4bc91314fcc74a5ba4c15990958367ce
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at UIWrapper.DisneyWorldWrapper.clickOn(DisneyWorldWrapper.java:107)
-	at stepDefinition.LoginSteps.click_on_sign_in_and_enter_and(LoginSteps.java:22)
-	at ✽.click on sign in and create new account(file:///C:/selenium%20new/Friends%20and%20family/DisneyWorldProject/resources/Features/AcceptSingleUser.feature:6)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1611172962", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1611172962'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;onetrust-accept-btn-handler&quot;]&quot;}
-  (Session info: chrome=124.0.6367.61)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace237665848", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace237665848'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/c904b9c6cbed4fa9b470c38cb0bec99c 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
 Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Command: [4bc91314fcc74a5ba4c15990958367ce, findElement {using=xpath, value=//*[@id=&quot;onetrust-accept-btn-handler&quot;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.61, chrome: {chromedriverVersion: 124.0.6367.60 (8771130bd84f..., userDataDir: C:\Program Files (x86)\scop...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49788}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(pac: http://127.0.0.1..., setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4bc91314fcc74a5ba4c15990958367ce
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
 	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at UIWrapper.DisneyWorldWrapper.clickOn(DisneyWorldWrapper.java:107)
-	at stepDefinition.LoginSteps.click_on_sign_in_and_enter_and(LoginSteps.java:22)
-	at ✽.click on sign in and create new account(file:///C:/selenium%20new/Friends%20and%20family/DisneyWorldProject/resources/Features/AcceptSingleUser.feature:6)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
 </pre></div></td>
-<td>17</td>
-<td>Runnerclasses.Accept@58d75e99</td></tr>
+<td>0</td>
+<td>Runnerclasses.FloridaValidatedifferentaddress@272ed83b</td></tr>
+<tr>
+<td title='Runnerclasses.WithoutFloridaValidation.feature()'><b>feature</b><br>Test class: Runnerclasses.WithoutFloridaValidation<br>Test method: Runs Cucumber Feature<br>Parameters: "Continue without validation", "Continue without validation : click on without validation"</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/f1a00352c81c445a9382e4afa5e0f731 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2066570623", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2066570623'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/f1a00352c81c445a9382e4afa5e0f731 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>Runnerclasses.WithoutFloridaValidation@120f102b</td></tr>
+<tr>
+<td title='Runnerclasses.FloridaVerifyMeKnow.feature()'><b>feature</b><br>Test class: Runnerclasses.FloridaVerifyMeKnow<br>Test method: Runs Cucumber Feature<br>Parameters: "Validate whether Verify Me Know button", "Validate whether Verify Me Know button enable without enter the data"</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/bafcf7fd2b75443089a0c3046dba330c 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1352326153", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1352326153'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/bafcf7fd2b75443089a0c3046dba330c 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>Runnerclasses.FloridaVerifyMeKnow@41fecb8b</td></tr>
+<tr>
+<td title='Runnerclasses.FloridaDifferentTicketType.feature()'><b>feature</b><br>Test class: Runnerclasses.FloridaDifferentTicketType<br>Test method: Runs Cucumber Feature<br>Parameters: "Validate Florida account wit different ticket type", "Validate Florida account wit different ticket type,increase number of days and increase number of members : Validate Florida account wit different ticket type"</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/248e11e2960c411ab8271476e6794b62 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace860766330", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace860766330'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/248e11e2960c411ab8271476e6794b62 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>Runnerclasses.FloridaDifferentTicketType@1ba9117e</td></tr>
+<tr>
+<td title='Runnerclasses.FloridaFields.feature()'><b>feature</b><br>Test class: Runnerclasses.FloridaFields<br>Test method: Runs Cucumber Feature<br>Parameters: "Validate florida fields", "Validate fields in the Validate by Id page : Validate florida fields"</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/98454b672ec9487bbdcb0a5320cb7077 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1947580383", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1947580383'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/98454b672ec9487bbdcb0a5320cb7077 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>Runnerclasses.FloridaFields@732c2a62</td></tr>
+<tr>
+<td title='Runnerclasses.NonFloridaRunner.feature()'><b>feature</b><br>Test class: Runnerclasses.NonFloridaRunner<br>Test method: Runs Cucumber Feature<br>Parameters: "Florida resident validation with non Florida account", "Validate non Florida account : Florida resident validation with non Florida account"</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/1df1c6e0c02a4411950c070468a3a6f1 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1182946493", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1182946493'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Sauce could not start your job. For more information on what happened, please visit https://app.saucelabs.com/tests/1df1c6e0c02a4411950c070468a3a6f1 
+Host info: host: &apos;DESKTOP-NTA1H7H&apos;, ip: &apos;192.168.1.22&apos;
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [--remote-allow-origins=*], extensions: []}, platformName: Windows 10, sauce:options: {accessKey: 8f0baf43-e329-4837-9180-1df..., name: Profile UI - FloridaResidency, screenResolution: 1280x1024, tunnel-identifier: tab-shared-tunnel, username: PROF_Studio}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:236)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:143)
+	at Core.SauceLabsConfig.createDriver(SauceLabsConfig.java:25)
+	at Core.TestSuiteInitialization.setUp(TestSuiteInitialization.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</pre></div></td>
+<td>0</td>
+<td>Runnerclasses.NonFloridaRunner@53976f5c</td></tr>
 </table><p>
 </body>
 </html>

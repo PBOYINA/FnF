@@ -6,22 +6,67 @@
   </listeners>
   <test thread-count="1" parallel="classes" name="Run All Tests in Google Chrome(failed)">
     <parameter name="isRemoteEnabled" value="false"/>
-    <parameter name="browserVersion" value="109.0"/>
+    <parameter name="browserVersion" value="124.0.2478.67"/>
     <parameter name="executionType" value="saucelabs"/>
-    <parameter name="browserName" value="chrome"/>
-    <parameter name="accessToken" value="cbdd3dd5-a9f3-409e-8012-8d134c012775"/>
-    <parameter name="testname" value=" ProdWebRegressionProfileSpaSuite-1"/>
-    <parameter name="username" value="TAB_Studio"/>
+    <parameter name="browserName" value="edge"/>
+    <parameter name="accessToken" value="8f0baf43-e329-4837-9180-1dfa345be4eb"/>
+    <parameter name="testname" value="FloridaResidency"/>
+    <parameter name="username" value="PROF_Studio"/>
     <classes>
-      <class name="Runnerclasses.Accept">
+      <class name="Runnerclasses.FloridaVerifyMeKnow">
         <methods>
           <include name="tearDownClass"/>
           <include name="setUp"/>
           <include name="setUp"/>
           <include name="closeBrowser"/>
-          <include name="feature" invocation-numbers="0"/>
+          <include name="feature"/>
         </methods>
-      </class> <!-- Runnerclasses.Accept -->
+      </class> <!-- Runnerclasses.FloridaVerifyMeKnow -->
+      <class name="Runnerclasses.FloridaFields">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="closeBrowser"/>
+          <include name="feature"/>
+        </methods>
+      </class> <!-- Runnerclasses.FloridaFields -->
+      <class name="Runnerclasses.WithoutFloridaValidation">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="closeBrowser"/>
+          <include name="feature"/>
+        </methods>
+      </class> <!-- Runnerclasses.WithoutFloridaValidation -->
+      <class name="Runnerclasses.FloridaValidatedifferentaddress">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="closeBrowser"/>
+          <include name="feature"/>
+        </methods>
+      </class> <!-- Runnerclasses.FloridaValidatedifferentaddress -->
+      <class name="Runnerclasses.FloridaDifferentTicketType">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="closeBrowser"/>
+          <include name="feature"/>
+        </methods>
+      </class> <!-- Runnerclasses.FloridaDifferentTicketType -->
+      <class name="Runnerclasses.NonFloridaRunner">
+        <methods>
+          <include name="tearDownClass"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="closeBrowser"/>
+          <include name="feature"/>
+        </methods>
+      </class> <!-- Runnerclasses.NonFloridaRunner -->
     </classes>
   </test> <!-- Run All Tests in Google Chrome(failed) -->
 </suite> <!-- Failed suite [Disney World Suite] -->

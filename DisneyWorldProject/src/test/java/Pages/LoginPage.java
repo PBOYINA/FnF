@@ -2,10 +2,9 @@ package Pages;
 
 import org.openqa.selenium.By;
 
-import config.BaseClass;
+
 
 public class LoginPage {
-	public static By disneyprivacy1 = By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]");
 	public static By frame = By.id("oneid-iframe");
 	public static By user = By.id("InputIdentityFlowValue");
 	public static By first = By.id("InputFirstName");

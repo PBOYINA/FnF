@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Disney World Suite"
+       parallel="classes">
+    <listeners>
+        <listener class-name="util.TestNGExecutionListener"></listener>
+    </listeners>
+    <test name="Run All Tests in Google Chrome">
+        <parameter name="browserName" value="edge"/>
+        <parameter name="browserVersion" value="124.0.2478.67"/>
+        <parameter name="isRemoteEnabled" value="false"/>
+
+        <parameter name="executionType" value="saucelabs"/>
+        <parameter name="username" value="PROF_Studio"/>
+        <parameter name="accessToken"
+                   value="8f0baf43-e329-4837-9180-1dfa345be4eb"/>
+        <parameter name="testname"
+                   value="FloridaResidency"/>
+        <classes>
+
+
+          <class name="Runnerclasses.NonFloridaRunner"></class>
+          <class name="Runnerclasses.FloridaDifferentTicketType"></class>
+          <class name="Runnerclasses.FloridaFields"></class>
+            <class name="Runnerclasses.FloridaValidatedifferentaddress"></class>
+
+          <class name="Runnerclasses.FloridaVerifyMeKnow"></class>
+            <class name="Runnerclasses.WithoutFloridaValidation"></class>
+
+
+
+
+
+
+
+
+
+
+        </classes>
+    </test>
+</suite>

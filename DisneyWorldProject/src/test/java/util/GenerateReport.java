@@ -45,7 +45,7 @@ public class GenerateReport {
             }
 
             Configuration configuration = new Configuration(reportOutputDirectory, "DisneyWorld");
-            //configuration.setBuildNumber("Version - -- - 15.0.2");
+            configuration.setBuildNumber("Version - -- - 15.0.2");
 
             ReportBuilder reportBuilder = new ReportBuilder(list, configuration);
             reportBuilder.generateReports();

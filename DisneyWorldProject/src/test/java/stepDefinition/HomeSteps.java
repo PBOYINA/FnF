@@ -3,7 +3,7 @@ package stepDefinition;
 import io.cucumber.java.en.*;
 
 import static config.Config.*;
-import static config.BaseClass.*;
+
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
@@ -19,16 +19,15 @@ import org.testng.annotations.Test;
 
 import config.BaseClass;
 
-import static Pages.EmailPage.*;
-import static Pages.FriendsAndFamily.*;
 import static Pages.HomePage.*;
-import static Pages.LoginPage.*;
+
 import static UIWrapper.DisneyWorldWrapper.*;
 
-public class HomeSteps extends BaseClass {
+public class HomeSteps extends BaseClass{
 
     @Given("User is navigating to Disney application")
-    public void user_is_navigating_to_disney_application() {
+    public void user_is_navigating_to_disney_application() throws InterruptedException {
+        Thread.sleep(7000);
         openBrowser(disney);
         System.out.println("User is navigating to Disney application");
     }
@@ -36,7 +35,7 @@ public class HomeSteps extends BaseClass {
     @When("user sign out Disney application")
     public void user_sign_out_disney_application() throws Exception {
         fluentWaitForElement(signout);
-        Thread.sleep(6000);
+        Thread.sleep(3000);
         clickOn(signout);
         System.out.println("user sign out Disney application");
     }
@@ -44,10 +43,10 @@ public class HomeSteps extends BaseClass {
     @And("click on notification icon and click manage invites")
     public void click_on_notification_icon_and_click_manage_invites() throws Exception {
         fluentWaitForElement(notification);
-        Thread.sleep(6000);
+        Thread.sleep(3000);
         clickOn(notification);
         fluentWaitForElement(invites);
-        Thread.sleep(6000);
+        Thread.sleep(3000);
         clickOn(invites);
         System.out.println("click on notification icon and click manage invites");
     }
@@ -124,5 +123,16 @@ public class HomeSteps extends BaseClass {
 //		Thread.sleep(3000);
 //		clickOn(accept);
         System.out.println("click Decline for multiple users");
+    }
+    @When("scroll down and click Profile")
+    public void scroll_down_and_click_profile() throws InterruptedException {
+        //javascriptScroll();
+    	 WebElement scroll1=findelement(profile); 
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", scroll1);
+        Thread.sleep(5000); 
+
+       isDisplayed(profile);
+       // actionScroll(scroll1);
+        javascriptClick(scroll1);
     }
 }

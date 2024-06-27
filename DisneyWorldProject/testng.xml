@@ -10,34 +10,30 @@
         <parameter name="browserVersion" value="109.0"/>
         <parameter name="isRemoteEnabled" value="false"/>
 
-        <parameter name="executionType" value="saucelabs"/>
+        <parameter name="executionType" value="local"/>
         <parameter name="username" value="TAB_Studio"/>
         <parameter name="accessToken"
                    value="cbdd3dd5-a9f3-409e-8012-8d134c012775"/>
         <parameter name="testname"
                    value=" ProdWebRegressionProfileSpaSuite-1"/>
         <classes>
-           <class name="Runnerclasses.Accept"></class>
-         <!--<class name="Runnerclasses.Decline"></class>
-             <class name="Runnerclasses.Search"></class>
-           <class name="Runnerclasses.Remove"></class>
-           <class name="Runnerclasses.SearchUnregisteredGuest"></class>
-           <class name="Runnerclasses.RemoveName"></class>
-           <class name="Runnerclasses.AcceptMultipleUsers"></class>
-           <class name="Runnerclasses.InformationDialogBox"></class>
-            <class name="Runnerclasses.InviteTwoGuestsResend"></class>
-          <class name="Runnerclasses.CheckMutualGuest"></class>
-           <class name="Runnerclasses.SentThreeUnregisteredrequest"></class>
-          <class name="Runnerclasses.CloseSettings"></class>
-          <class name="Runnerclasses.AllowSearching"></class>
-           <class name="Runnerclasses.DeclineMultipleUsers"></class>
-            <class name="Runnerclasses.RemoveMultipleUsers"></class>
-            <class name="Runnerclasses.AllowToviewYourPlans"></class>
-          <class name="Runnerclasses.CreateProfileYouManage"></class>
-           <class name="Runnerclasses.ViewDisneyPassPhotos"></class>
-            <class name="Runnerclasses.ConnectMyManagedAccount"></class>
-            <class name="Runnerclasses.LikeSettings"></class>
-           <class name="Runnerclasses.InviteTwoGuests"></class>-->
+
+               
+      <class name="Runnerclasses.creditcardtextbox"></class>
+  <!-- <class name="Runnerclasses.Datefieldrunner"></class>
+   <class name="Runnerclasses.SecuritycodeRunner"></class>
+    <class name="Runnerclasses.NameoncardRunner"></class>
+     <class name="Runnerclasses.AddressLines"></class>
+     <class name="Runnerclasses.NoCreditCard"></class> 
+      <class name="Runnerclasses.Address2Runner"></class>
+      <class name="Runnerclasses.PaymentmethodAllField"></class>
+       <class name="Runnerclasses.Address1Runner"></class> 
+       <class name="Runnerclasses.AddCreditCard"></class>
+       <class name="Runnerclasses.CityandStateRunner"></class>
+      <class name="Runnerclasses.ZipcodeRunner"></class>-->
+      
+      
+        
         </classes>
     </test>
 </suite>
